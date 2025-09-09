@@ -1,0 +1,208 @@
+:root {
+    --main-bg-color: #f0f2f5;
+    --card-bg-color: #ffffff;
+    --blue-color: #004d99;
+    --dark-blue-color: #003366;
+    --green-color: #28a745;
+    --red-color: #dc3545;
+    --orange-color: #fd7e14;
+    --light-gray: #e9ecef;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+header {
+    background-color: var(--blue-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-form-container, .result-area-container {
+    background-color: var(--card-bg-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+h2 {
+    color: var(--blue-color);
+    text-align: center;
+    margin-top: 0;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.oval-input, .oval-select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--blue-color);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--dark-blue-color);
+}
+
+.placeholder-text, .error-message {
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.error-message {
+    color: var(--red-color);
+    font-weight: bold;
+}
+
+.loading-indicator {
+    text-align: center;
+    font-weight: bold;
+    color: var(--blue-color);
+}
+
+.result-card {
+    border-top: 5px solid var(--blue-color);
+    padding: 20px;
+}
+
+.result-card h3, .result-card h4 {
+    color: var(--blue-color);
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.result-detail p {
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.grades-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.grades-table th, .grades-table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: center;
+}
+
+.grades-table th {
+    background-color: var(--blue-color);
+    color: white;
+    font-weight: bold;
+}
+
+.grades-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.status-passed {
+    color: var(--green-color);
+    font-weight: bold;
+}
+
+.status-failed {
+    color: var(--red-color);
+    font-weight: bold;
+}
+
+.carry-over-row {
+    background-color: #fff3cd; /* لون مميز للمواد الراسبة */
+}
+
+.download-btn {
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 0.9em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* تصميم متجاوب (Responsive Design) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .search-form-container, .result-area-container {
+        padding: 15px;
+    }
+
+    .grades-table th, .grades-table td {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+}
